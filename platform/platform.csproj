@@ -42,12 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoolSave\BoolSave.cs" />
+    <Compile Include="BoolSave\BoolStruct.cs" />
+    <Compile Include="BoolSave\BoolType_.cs" />
+    <Compile Include="BoolSave\CycleBool.cs" />
+    <Compile Include="BoolSave\SerialBool.cs" />
     <Compile Include="Common\GenerateId.cs" />
     <Compile Include="Common\_RunSlot.cs" />
     <Compile Include="Common\__singleton.cs" />
     <Compile Include="Common\__tuple.cs" />
-    <Compile Include="Service\Handle\HandleService.cs" />
-    <Compile Include="Service\Handle\IHandle.cs" />
+    <Compile Include="Serialize\Headstream\IHeadstream.cs" />
+    <Compile Include="Serialize\Headstream\ISerialize.cs" />
+    <Compile Include="Serialize\Headstream\IStream.cs" />
+    <Compile Include="Serialize\Headstream\XmlReader.cs" />
+    <Compile Include="Serialize\Headstream\XmlWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property\IPropertyId.cs" />
     <Compile Include="Property\Property.cs" />

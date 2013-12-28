@@ -5,6 +5,15 @@ namespace platform
 {
     public class GenerateId
     {
+        public static ulong _runId(uint nId0,
+            uint nId1)
+        {
+            ulong result = nId0;
+            result <<= 32;
+            result += nId1;
+            return result;
+        }
+
         public static uint _runStamp() {
             DateTime nowTime_ = DateTime.Now;
             DateTime begTime_ = new DateTime(2014, 1, 1);

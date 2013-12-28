@@ -9,5 +9,10 @@ namespace action
 {
     public class ActionMgr : Property
     {
+        public ActionMgr() {
+
+        }
+
+        List<ActionList> mActionLists;
     }
 }

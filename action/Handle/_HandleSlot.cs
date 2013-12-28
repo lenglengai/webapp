@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace platform
+namespace action
 {
-    public interface IHandle
-    {
-        void _runHandle();
-    }
+    public delegate void _HandleSlot(Handle nHandle);
 }
