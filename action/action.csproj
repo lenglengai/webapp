@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action\ActionService.cs" />
-    <Compile Include="Action\ActionList.cs" />
     <Compile Include="Action\IActionHandle.cs" />
     <Compile Include="Action\ActionMessage.cs" />
     <Compile Include="Action\ActionMgr.cs" />

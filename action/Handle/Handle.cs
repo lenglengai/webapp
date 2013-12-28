@@ -8,28 +8,30 @@ namespace action
     public abstract class Handle
     {
         public void _pushActionList(
-            ActionList nActionList) {
+            ActionMgr nActionMgr)
+        {
             lock (mSyncObject) {
-                mActionLists.Enqueue(nActionList);
+                mActionMgrs.Enqueue(nActionMgr);
             }
         }
 
         public void _runHandle() {
-            ActionList actionList = null;
+            ActionMgr actionMgr = null;
             lock (mSyncObject)
             {
-                actionList =
-                    mActionLists.Dequeue();
+                actionMgr =
+                    mActionMgrs.Dequeue();
             }
-            actionList._runActionMessage();
+            actionMgr._runActionMessage();
         }
 
         public Handle() {
-            mActionLists =
-                new Queue<ActionList>();
+            mActionMgrs =
+                new Queue<ActionMgr>();
         }
 
-        Queue<ActionList> mActionLists;
-        readonly object mSyncObject = new object();
+        Queue<ActionMgr> mActionMgrs;
+        readonly object mSyncObject =
+            new object();
     }
 }

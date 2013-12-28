@@ -7,12 +7,24 @@ using platform;
 
 namespace action
 {
-    public class ActionMgr : Property
+    public class ActionMgr
     {
-        public ActionMgr() {
-
+        public void _pushActionMessage(
+            ActionMessage nActionMessage) {
+            mActionMessages.Add(nActionMessage);
         }
 
-        List<ActionList> mActionLists;
+        public void _runActionMessage() {
+            foreach (ActionMessage i
+                in mActionMessages) {
+            }
+        }
+
+        public ActionMgr() {
+            mActionMessages
+                = new List<ActionMessage>();
+        }
+
+        List<ActionMessage> mActionMessages;
     }
 }

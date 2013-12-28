@@ -14,6 +14,8 @@ namespace action
             ulong id_ = nHandleMgr._getId();
             if (!mHandleMgrs.ContainsKey(id_)) {
                 mHandleMgrs[id_] = nHandleMgr;
+                nHandleMgr.m_tRegisterHandle +=
+                    this._registerHandle;
             } else {
                 LogService logService_ =
                     __singleton<LogService>._instance();
